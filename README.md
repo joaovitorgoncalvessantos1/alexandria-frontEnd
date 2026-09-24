@@ -1,16 +1,42 @@
-# React + Vite
+# Alexandria 📚
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Front-end de um sistema de gerenciamento de biblioteca desenvolvido com React.
 
-Currently, two official plugins are available:
+O projeto Alexandria foi desenvolvido como um projeto Full Stack, com o objetivo de colocar em prática conceitos de desenvolvimento web, consumo de API e organização de aplicações.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologias
 
-## React Compiler
+- React
+- JavaScript
+- Vite
+- CSS Modules
+- React Router
+- HTML5
+- CSS3
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Funcionalidades
 
-## Expanding the ESLint configuration
+- Catálogo de livros
+- Visualização de detalhes dos livros
+- Cadastro de usuários
+- Login
+- Sistema de empréstimos
+- Histórico de empréstimos
+- Favoritos
+- Navegação entre páginas
+- Consumo de API REST
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🖥️ Estrutura
+
+O projeto está organizado utilizando componentes reutilizáveis e páginas separadas:
+
+```text
+src/
+├── components/
+├── pages/
+├── routes/
+├── services/
+├── utils/
+├── App.jsx
+├── main.jsx
+└── main.css
