@@ -1,0 +1,180 @@
+/* Container principal com a imagem de fundo escura fosca */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)),
+              url('../../assets/biblioteca-bg.jpg') center/cover no-repeat; /* Opcional: adicione o background se quiser */
+  background-color: #0f141c;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Card refinado com bordas douradas sutis */
+.card {
+  background: rgba(26, 32, 44, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(197, 147, 94, 0.15);
+  border-radius: 20px;
+  padding: 3.5rem 2.5rem;
+  width: 100%;
+  max-width: 410px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.titleContainer {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.formContainer {
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Grupos de Input e Etiquetas */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #c5935e; /* Tom dourado puxado para o tema clássico */
+  letter-spacing: 1px;
+}
+
+/* Estilização direta dos Inputs do componente interno */
+.form input {
+  width: 100%;
+  padding: 0.95rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.form input:focus {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: #c5935e;
+  box-shadow: 0 0 0 3px rgba(197, 147, 94, 0.15);
+}
+
+.form input::placeholder {
+  color: #5a6578;
+}
+
+/* Links auxiliares */
+.forgotPassword {
+  text-align: right;
+  font-size: 0.85rem;
+  margin: -0.5rem 0 0.5rem 0;
+}
+
+.forgotPassword a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.forgotPassword a:hover {
+  color: #c5935e;
+}
+
+/* Erros de validação */
+.erro {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin: 0;
+  text-align: center;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Botão clássico Premium */
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #c5935e 0%, #a47343 100%);
+  color: #111622;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(197, 147, 94, 0.2);
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(197, 147, 94, 0.35);
+  filter: brightness(1.1);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  background: #334155;
+  color: #64748b;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Rodapé do Card */
+.footerText {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 1.5rem 0 0 0;
+}
+
+.footerText a {
+  color: #c5935e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footerText a:hover {
+  color: #e2b784;
+  text-decoration: underline;
+}

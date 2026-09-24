@@ -1,0 +1,72 @@
+/* Categorias.module.css */
+
+.sectionCategorias {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.sectionCategorias h1 {
+  font-size: 2rem;
+  color: #0b1d33;
+  margin: 0 0 0.4rem 0;
+  font-weight: 700;
+}
+
+.sectionCategorias p {
+  color: #64748b;
+  margin: 0 0 2rem 0;
+}
+
+/* Grid Responsivo automático */
+.gridCategorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card Individual */
+.cardCategoria {
+  position: relative;
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden; /* Corta a imagem quando ela der zoom */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Imagem de Fundo do Card */
+.imgCategoria {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Efeito de zoom elegante ao passar o mouse */
+.cardCategoria:hover .imgCategoria {
+  transform: scale(1.08);
+}
+
+/* Película escura e texto centralizado por cima da imagem */
+.overlayNome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.1), rgba(11, 29, 51, 0.75));
+  display: flex;
+  align-items: flex-end;
+  padding: 1.2rem;
+  box-sizing: border-box;
+}
+
+.overlayNome h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

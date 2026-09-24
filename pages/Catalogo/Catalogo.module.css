@@ -1,0 +1,97 @@
+.section{
+    margin-top: 2.7rem;
+}
+.catalogoContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:3.4rem 20px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+/* Cabeçalho / Introdução */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #666666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 1. Container da Barra de Busca (Ajustado com seu CSS) */
+.searchWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+/* O wrapper do Input que você enviou */
+.navegation_input {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 2rem;
+}
+
+/* 2. O Input Interno: Estilos visuais aplicados ao input real */
+.navegation_input input {
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.15); /* Ajustado para fundo claro do catálogo */
+  background: rgba(0, 0, 0, 0.05);       /* Ajustado para fundo claro do catálogo */
+  color: #1a1a1a;                         /* Texto escuro para leitura no fundo claro */
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box; 
+}
+
+/* Seletor do placeholder */
+.navegation_input input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Seletor para o foco com o toque dourado */
+.navegation_input input:focus {
+  background: rgba(0, 0, 0, 0.02);
+  border-color: #d4af37; 
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+/* Container de Categorias */
+.categoriesWrapper {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+}
+
+/* Grid de Livros */
+.booksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+  justify-items: center;
+}
+
+/* Mensagem de Lista Vazia */
+.emptyMessage {
+  text-align: center;
+  padding: 40px;
+  color: #999999;
+  font-size: 1.1rem;
+  grid-column: 1 / -1;
+}

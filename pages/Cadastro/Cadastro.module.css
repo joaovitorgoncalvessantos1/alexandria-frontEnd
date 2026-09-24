@@ -1,0 +1,177 @@
+/* Container principal com o fundo escuro fosco */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #0f141c;
+  padding: 2.5rem 1.5rem;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Card refinado em tons escuros e bordas douradas sutis */
+.card {
+  background: rgba(26, 32, 44, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(197, 147, 94, 0.15);
+  border-radius: 20px;
+  padding: 3.5rem 2.5rem;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Título adaptado para fontes claras */
+.title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 2.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Grupo de input (Label + Campo) */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Texto da label seguindo o padrão ouro clássico */
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #c5935e;
+  letter-spacing: 1px;
+}
+
+/* Container do input para alinhar elementos internos */
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilização limpa dos campos de input internos */
+.inputWrapper :global(input),
+.inputWrapper input {
+  width: 100%;
+  padding: 0.95rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* Margem direita caso use o botão de visualizar senha */
+.inputGroup:nth-child(3) .inputWrapper :global(input),
+.inputGroup:nth-child(3) .inputWrapper input {
+  padding-right: 2.75rem;
+}
+
+.inputWrapper :global(input):focus,
+.inputWrapper input:focus {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: #c5935e;
+  box-shadow: 0 0 0 3px rgba(197, 147, 94, 0.15);
+}
+
+.inputWrapper :global(input)::placeholder,
+.inputWrapper input::placeholder {
+  color: #5a6578;
+}
+
+/* Botão de mostrar/esconder senha (olho) */
+.togglePassword {
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #5a6578;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.togglePassword:hover {
+  color: #c5935e;
+}
+
+/* Botão customizado Premium */
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #c5935e 0%, #a47343 100%);
+  color: #111622;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(197, 147, 94, 0.2);
+}
+
+.submitButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(197, 147, 94, 0.35);
+  filter: brightness(1.1);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+/* Caixa de Erro Refinada */
+.erro {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin: 1.25rem 0 0 0;
+  text-align: center;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 0.65rem;
+  border-radius: 8px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Texto de rodapé para alternar entre telas */
+.footerText {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 1.75rem 0 0 0;
+}
+
+.footerText a {
+  color: #c5935e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.footerText a:hover {
+  color: #e2b784;
+  text-decoration: underline;
+}

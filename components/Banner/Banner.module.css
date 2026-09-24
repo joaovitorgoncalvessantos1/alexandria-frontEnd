@@ -1,0 +1,76 @@
+
+
+.sectionBanner {
+   min-width: 90vw; /* Força a largura a ocupar toda a tela */
+    margin-left: calc(-50vw + 50%);
+  position: relative;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  
+
+  background: url('../../assets/banner.png') center/cover no-repeat;
+}
+
+
+.sectionBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 29, 51, 0.75),
+    rgba(11, 29, 51, 0.45) 50%,
+    rgba(11, 29, 51, 0.8)
+  );
+  z-index: 1;
+}
+
+.sectionBanner h1,
+.sectionBanner p {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  margin: 0;
+}
+
+
+.sectionBanner h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.2rem;
+  max-width: 800px;
+
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilização do Subtítulo */
+.sectionBanner p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+@media (max-width: 768px) {
+  .sectionBanner h1 {
+    font-size: 2.2rem;
+  }
+  .sectionBanner p {
+    font-size: 1rem;
+  }
+}

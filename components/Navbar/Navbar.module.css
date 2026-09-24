@@ -1,0 +1,107 @@
+/* Navbar.module.css */
+
+/* Container externo para controle de posicionamento fixo */
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+.navbarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Efeito de vidro fosco elegante */
+  background: rgba(11, 29, 51, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Estilização da tag <nav> interna */
+.navRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  box-sizing: border-box;
+}
+
+/* 1. O Container: Cuida apenas do posicionamento na barra */
+.navegation_input {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 2rem;
+}
+
+/* 2. O Input Interno: Herda os estilos visuais que você criou */
+.navegation_input input {
+  width: 100%;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Garante que o padding não quebre a largura */
+}
+
+/* Seletor corrigido para o placeholder do input interno */
+.navegation_input input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Seletor corrigido para o foco do input interno */
+.navegation_input input:focus {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #d4af37; /* Toque dourado clássico ao focar */
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+
+/* Lista de navegação */
+.navegation_ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2.5rem;
+}
+
+/* Itens da lista */
+.navegation_ul li {
+  color: #f5f5f7;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navegation_ul li:hover {
+  color: #d4af37; /* Cor dourada ao passar o mouse */
+}
+
+/* Linha decorativa sutil ao passar o mouse nos links */
+.navegation_ul li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #d4af37;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navegation_ul li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

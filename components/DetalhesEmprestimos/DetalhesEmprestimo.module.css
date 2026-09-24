@@ -1,0 +1,172 @@
+.detalhes {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8rem 2rem 4rem;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.capa {
+  width: 180px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.informacoes {
+  flex: 1;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #d4af37;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.informacoes h1 {
+  margin: 0;
+  color: #0b1d33;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3rem;
+}
+
+.autor {
+  margin-top: 0.5rem;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.status {
+  margin-top: 1.5rem;
+}
+
+.status span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: #e6f4ea;
+  border: 1px solid #ceead6;
+  color: #137333;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.informacoesEmprestimo {
+  margin-top: 3rem;
+}
+
+.informacoesEmprestimo h2,
+.observacao h2 {
+  margin-bottom: 1.5rem;
+  color: #0b1d33;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #e2e8f0;
+}
+
+.item {
+  padding: 1.4rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.item span {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.item strong {
+  color: #0b1d33;
+  font-size: 0.95rem;
+}
+
+.observacao {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.observacao p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.carregando {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+.botao {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 3.5rem; /* Margem alinhada com o padrão visual do seu CSS */
+  width: 100%;
+}
+
+.botao button {
+  background-color: #0b1d33;  /* Corrigido para usar exatamente o azul do seu h1 */
+  color: #ffffff;             
+  font-family: sans-serif;    
+  font-size: 15px;
+  font-weight: 600;           
+  padding: 14px 40px;         /* Botão ligeiramente mais largo para destacar no centro */
+  border: none;               
+  border-radius: 6px;         
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease; 
+  box-shadow: 0 4px 12px rgba(11, 29, 51, 0.15); /* Sombra suave usando a cor do botão */
+}
+
+/* Efeito ao passar o mouse */
+.botao button:hover {
+  background-color: #163255;  /* Tom sutilmente mais claro do azul original */
+}
+
+/* Efeito ao clicar */
+.botao button:active {
+  transform: scale(0.98);     
+}
+
+
+@media (max-width: 700px) {
+  .cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .informacoes h1 {
+    font-size: 2.3rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

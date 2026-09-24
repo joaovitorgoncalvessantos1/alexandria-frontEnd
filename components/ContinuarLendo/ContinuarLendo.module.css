@@ -1,0 +1,164 @@
+/* continuarLendo.module.css */
+
+.sectionContinuar {
+  
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+ 
+}
+
+.sectionContinuar h1 {
+  font-size: 2rem;
+  color: #0b1d33;
+  margin: 0 0 0.4rem 0;
+  font-weight: 700;
+}
+
+.sectionContinuar p {
+  color: #64748b;
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+}
+
+.conteiner {
+
+  position: relative;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+}
+
+.capalivro {
+  width: 90px !important;       
+  height: 130px !important;      
+  object-fit: cover;            
+  border-radius: 6px;
+  display: block;
+}
+
+.infolivro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.infolivro h2 {
+  font-size: 1.3rem;
+  color: #0b1d33;
+  margin: 0;
+  font-weight: 600;
+}
+
+.autor {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.progressoTexto {
+  display: flex;
+  justify-content: space-between;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.barraProgressoBg {
+  width: 100%;
+  height: 6px;
+  background: #f1f5f9;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.barraProgressoFill {
+  height: 100%;
+  background: #2563eb; 
+  border-radius: 3px;
+}
+
+.btnRetomar {
+  display: inline-flex;
+  align-items: center;
+  color: #0b1d33;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+  width: max-content;
+  transition: transform 0.2s ease;
+}
+
+.btnRetomar:hover {
+  transform: translateX(4px);
+}
+
+.badgedevolucao {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: #fef2f2;
+  color: #ef4444; 
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.statusAtrasado {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-color: #fee2e2;
+}
+
+.statusAtivo {
+  background-color: #e6f4ea;
+  color: #137333;
+  border-color: #ceead6;
+}
+
+.statusDevolvido {
+  background-color: #eff6ff;
+  color: #2563eb;
+  border-color: #dbeafe;
+}
+
+
+
+@media (max-width: 550px) {
+  .conteiner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 3.5rem;
+  }
+  .badgedevolucao {
+    left: 1.2rem;
+    right: auto;
+  }
+}

@@ -1,0 +1,189 @@
+.detalhes {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 2rem 4rem;
+}
+
+.cabecalho {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.capaContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.capa {
+  width: 240px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.informacoes {
+  max-width: 700px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #d4af37;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.informacoes h1 {
+  margin: 0 0 1.5rem;
+  color: #0b1d33;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.5rem;
+}
+
+.sinopse {
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 650px;
+}
+
+.status {
+  margin-top: 2rem;
+}
+
+.statusDisponivel {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  background: #e6f4ea;
+  border: 1px solid #ceead6;
+  color: #137333;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.informacoesLivro {
+  margin-top: 5rem;
+}
+
+.informacoesLivro h2,
+.disponibilidade h2 {
+  color: #0b1d33;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #e2e8f0;
+}
+
+.item {
+  padding: 1.3rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.item span {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.item strong {
+  color: #0b1d33;
+  font-size: 0.95rem;
+}
+
+.disponibilidade {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 4rem;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.disponibilidade h2 {
+  margin-bottom: 0.5rem;
+}
+
+.disponibilidade p {
+  margin: 0;
+  color: #64748b;
+}
+
+.btnEmprestimo {
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+  background: #0b1d33;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btnEmprestimo:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.btnEmprestimo:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.carregando {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .detalhes {
+    padding: 7rem 1.5rem 3rem;
+  }
+
+  .cabecalho {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .capa {
+    width: 200px;
+    height: 300px;
+  }
+
+  .informacoes h1 {
+    font-size: 2.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .disponibilidade {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .informacoes h1 {
+    font-size: 2.1rem;
+  }
+}
